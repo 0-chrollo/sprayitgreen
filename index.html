@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Basic Reset & Typography --- */
+        :root {
+            --primary-green: #1E4620;
+            --accent-yellow: #FBBF24;
+            --light-text: #F0FDF4;
+            --dark-text: #1E4620;
+        }
+
+
+        body {
+            font-family: 'Inter', sans-serif;
+           
+          
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* --- Hero Section Styling --- */
+        .hero {
+            color: var(--light-text);
+            background-color: var(--primary-green);
+            margin-top: 9vh;
+        
+            display:grid;
+            align-items:center;
+            justify-content:left;
+            /* Make hero section take full viewport height */
+            padding: 2rem; /* Add padding for spacing on smaller screens */
+        }
+
+        .hero-content {
+            
+            height:38rem;
+            max-width: 650px; /* Limit the width of the content for readability */
+            text-align: left; /* Default to left-align */
+            width: 100%;
+        }
+
+        /* --- Typography Styling --- */
+        .hero-title {
+            text-align: left;
+            font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: var(--accent-yellow); /* Highlight color for specific words */
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.125rem); /* Responsive font size */
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        /* --- Button Styling --- */
+        .hero-buttons {
+            flex-direction:row;
+            display: flex;
+            /* Allow buttons to wrap on small screens */
+            align-items: left; /* Align buttons vertically */
+            gap: 1rem; /* Space between buttons */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.70rem 1.45rem;
+            border-radius: 0.2rem; /* Rounded corners */
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 80%;
+            border: 1.66px solid transparent;
+            /* Smooth transition for hover effects */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: var(--dark-text);
+        }
+
+        .btn-primary:hover {
+            background-color: #FACC15; /* Slightly lighter yellow on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0 10px 15px rgba(254, 243, 243, 0.317);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--light-text);
+            border-color: var(--light-text);
+            /* --- Make this button smaller than the primary one --- */
+            padding: 0.625rem 1.5rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--light-text);
+            color: var(--primary-green);
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .hero-content {
+                
+                /* Keep content left-aligned on mobile */
+                text-align: left;
+            }
+
+            .hero-buttons {
+                /* Stack buttons vertically */
+                flex-direction:row;
+                /* Horizontally align buttons to the left */
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/sg-logo.png" alt="Logo">
+                <span class="logo-text">Sprayitgreen</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#reviews" class="nav-link">Testimonials</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Main Heading -->
+            <h1 class="hero-title">
+                Simple Sustainability with <span class="highlight">Community Solar.</span>
+            </h1>
+            <!-- Subheading -->
+            <p class="hero-subtitle">
+                We consult large energy users to give them access to Community Solar programs turnkey.
+            </p>
+
+
+
+
+<style>
+
+    .keys{
+
+display:grid;
+
+margin: 2rem;;
+    }
+</style>
+
+            <div class="keys">
+
+ <span><i class="fa-light fa-spray-can"></i>Spray it green for your grasses</span>
+
+    <span><i class="fa-light fa-user-shield"></i>Spray it green for your grasses</span>
+        
+             </div>
+
+
+             <p class="hero-subtitle">
+                We consult large energy users to give them access to Community Solar programs turnkey.
+            </p>
+
+
+            <!-- Call-to-Action Buttons -->
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Contact Us</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+<style>
+
+    .about-us{
+
+        margin: 1rem;
+    }
+</style>
+    <section class="about-us">
+
+        <h1>---About us</h1>
+    </section>
+</body>
+
+<script src="static/scrips.js"></script>
+
+</html>
+
