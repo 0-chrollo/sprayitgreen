@@ -32,7 +32,7 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     text-decoration: none;
     transition: all 0.3s ease;
     background-color: transparent;
@@ -40,8 +40,8 @@
 
 .logo img {
     background-color: transparent;
-    height: 4rem;
-    width: 6rem;
+    height: 4.5rem;
+    width: 6.5rem;
     transition: all 0.3s ease;
 }
 
