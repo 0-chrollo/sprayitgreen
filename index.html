@@ -856,6 +856,422 @@ align-items:self-start;
         window.addEventListener('resize', checkMobile);
       </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <style>
+
+        .franchise-section {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 2rem;
+        }
+
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .franchise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 0;
+            position: relative;
+        }
+
+        .franchise-item {
+            padding: 3rem 2rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: transparent;
+        }
+
+        .franchise-item:hover {
+            background: rgba(248, 249, 250, 0.3);
+            transform: scale(1.02);
+            z-index: 10;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04);
+        }
+
+        .item-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .item-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-right: 2rem;
+            position: relative;
+            color: var(--accent-color);
+        }
+
+        .item-icon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .franchise-item:hover .item-icon::after {
+            transform: scaleX(1);
+        }
+
+        .item-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .item-description {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            font-size: inherit;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent-color);
+            opacity: 0.3;
+        }
+
+        .franchise-item:nth-child(1) {
+            --accent-color: #2563eb;
+        }
+
+        .franchise-item:nth-child(2) {
+            --accent-color: #7c3aed;
+        }
+
+        .franchise-item:nth-child(3) {
+            --accent-color: #0891b2;
+        }
+
+        .franchise-item:nth-child(4) {
+            --accent-color: #059669;
+        }
+
+        .franchise-item:nth-child(5) {
+            --accent-color: #dc2626;
+        }
+
+        .franchise-item:nth-child(6) {
+            --accent-color: #ea580c;
+        }
+
+        .franchise-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-color), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .franchise-item:hover::before {
+            opacity: 0.02;
+        }
+
+        @media (max-width: 768px) {
+            .franchise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .franchise-item {
+                padding: 2rem 1.5rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 1.5rem;
+            }
+
+            .item-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .franchise-item:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .franchise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .franchise-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .franchise-item:nth-child(3n) {
+                border-right: none;
+            }
+
+            .franchise-item:nth-child(n+5) {
+                border-bottom: none;
+            }
+        }
+
+        @media (min-width: 1201px) {
+            .franchise-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+
+    <section class="franchise-section">
+
+        <div class="franchise-grid">
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="item-title">Proven Business Model</h3>
+                </div>
+                <p class="item-description">
+                    Our <span class="highlight">time-tested framework</span> has delivered consistent results across diverse markets. With refined processes and strategic insights, we provide the foundation for <span class="highlight">sustainable profitability</span> and long-term growth.
+                </p>
+            </div>
+
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="item-title">Comprehensive Training</h3>
+                </div>
+                <p class="item-description">
+                    Master every aspect of operations through our <span class="highlight">intensive training program</span>. From technical skills to leadership development, we ensure you're equipped with the knowledge and confidence for <span class="highlight">immediate success</span>.
+                </p>
+            </div>
+
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-headset"></i></div>
+                    <h3 class="item-title">Ongoing Support</h3>
+                </div>
+                <p class="item-description">
+                    Access our dedicated support network whenever you need guidance. From operational challenges to strategic planning, our experts provide <span class="highlight">continuous assistance</span> to maximize your <span class="highlight">business potential</span>.
+                </p>
+            </div>
+
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="item-title">Marketing Excellence</h3>
+                </div>
+                <p class="item-description">
+                    Leverage our powerful marketing engine with <span class="highlight">national campaigns</span> and localized strategies. Our proven approach drives customer acquisition and builds lasting <span class="highlight">brand recognition</span> in your market.
+                </p>
+            </div>
+
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="item-title">Territory Protection</h3>
+                </div>
+                <p class="item-description">
+                    Secure your investment with <span class="highlight">exclusive territory rights</span>. We protect your market position by ensuring no competing franchises operate within your designated area, guaranteeing <span class="highlight">market exclusivity</span>.
+                </p>
+            </div>
+
+            <div class="franchise-item">
+                <div class="item-header">
+                    <div class="item-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="item-title">Network Community</h3>
+                </div>
+                <p class="item-description">
+                    Join an exclusive network of <span class="highlight">successful entrepreneurs</span> who share insights and best practices. Our collaborative community creates opportunities for growth and <span class="highlight">mutual success</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 <script src="static/scrips.js" ></script>
 
