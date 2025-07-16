@@ -408,44 +408,117 @@ align-items:self-start;
         </script>
         </section>
 
-<section class="offer">
-
-<img src="assets/grass-background (1).webp" class="bg-image">
-
-<div class="overlay"><h3>Hello</h3></div>
 
 
-<style>
 
-    .offer{
 
-        position: relative;
-    }
 
-    .bg-image{
-        width:100%;
-        height:50vh;
-        object-fit: cover;
- 
+    
+
+
+
+    <style>
+  
+
+        .cards-section {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.3)), 
+                        url('assets/spraybg.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 90px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .overlay{
+        .cards-container {
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
 
+        .card {
+            position: relative;
+            background: white;
+            border-radius: 2px;
+            padding: 50px 30px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-number {
             position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            height:100%;
-            background-color:rgba(58, 2, 2, 0.5);
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid white;
         }
-</style>
 
-</section>
+        .card-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
 
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+        }
 
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 90px;
+            }
+        }
+    </style>
 
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-number">1</div>
+                <h3 class="card-title">Step One</h3>
+                <p class="card-description">This is the first step in our process. We begin by understanding your needs and requirements.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-number">2</div>
+                <h3 class="card-title">Step Two</h3>
+                <p class="card-description">Next, we develop a comprehensive plan and strategy that aligns with your goals.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-number">3</div>
+                <h3 class="card-title">Step Three</h3>
+                <p class="card-description">We implement and execute the solution with precision and care.</p>
+            </div>
 
-
+            <div class="card">
+                <div class="card-number">4</div>
+                <h3 class="card-title">Step Four</h3>
+                <p class="card-description">Finally, we deliver results that exceed your expectations and provide ongoing support.</p>
+            </div>
+        </div>
+    </section>
 
 
 
