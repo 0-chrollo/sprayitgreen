@@ -230,357 +230,206 @@ align-items:self-start;
         </div>
     </section>
 
-    <style>
+  
 
 
-        /* Base styles for the container */
-        .main-content-grid-wrapper {
-          display: grid; /* Establishes a grid container */
-          grid-template-columns: 1fr 1fr; /* Defines two columns, each taking an equal fraction of space */
-          gap: 20px; /* Space BETWEEN the grid cells (columns in this case) */
-         
-          
-          margin: 0 auto;
-          box-sizing: border-box;
-        }
-        
-        /* Styles for individual columns (grid items) */
-        .left-column-grid{
 
-            padding: 20px;
-        }
-        .right-column-grid {
-          /* No need for flex: 1 here, grid-template-columns handles the sizing */
-          padding: 2px;
-        
-          box-sizing: border-box;
-        }
-        
-        /* Specific styling for the left column */
-        .left-column-grid {
-         
-          color: #333;
-          text-align: left;
-        }
-        
-        
-        
-        /* Ensure images inside columns are responsive */
-        .left-column-grid,
-        .right-column-grid {
-          max-width: 100%;
-          height: auto;
-          display: block;
-          margin-top: 1px;
-        }
-        
-        /*
-         * Media Query for Responsiveness:
-         * Columns will stack on screens smaller than or equal to 768px.
-         */
-        @media (max-width: 768px) {
-          .main-content-grid-wrapper {
-            grid-template-columns: 1fr; /* Changes to a single column for stacking */
-            gap: 5px; /* Adjust gap when stacked */
-          }
-        
-          /* Optional: Adjust padding on smaller screens if needed */
-          .left-column-grid{
 
-            padding: 16px;
-          }
-          .right-column-grid {
-           
-          }
-        }
-        
-        /* Optional: Further refinement for very small screens */
-        @media (max-width: 480px) {
-          .main-content-grid-wrapper {
-            padding: 15px;
-          }
-          .left-column-grid,
-          .right-column-grid {
-            border-radius: 0;
-          }
-        }
-        </style>
-        
-        
-        <div class="main-content-grid-wrapper">
-            <div class="left-column-grid">
-        
-        
-        
-        
+
+
         <style>
-        
-          
-                    
-                    
-                    .section-title::before {
-                    
-                    content: '';
-                    
-                    position: absolute;
-                    
-                    left: 0;
-                    
-                    top: 50%;
-                    
-                    transform: translateY(-50%);
-                    
-                    width: 65px;
-                    
-                    height: 6px;
-                    
-                    
-                   background-color: #318835;
-                    
-                    }
-                    
-                    
-                    .section-title {
-                    
-                    position: relative;
-                    
-                    font-size: 2.5em;
-                    
-                    font-weight: 300;
-                    
-                    margin-bottom: 30px;
-                    
+            
+    
+            .about-us {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                background-color: #f8f9fa;
+                color: #333;
+            }
+    
+            .contain {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 15px 15px;
+                gap:30px;
+            }
+    
+            .about-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+                align-items: center;
+            }
+    
+            .content {
+                padding-right: 10px;
+            }
+    
+            .section-title {
+                font-size: 3.5rem;
+                font-weight: 350;
+                margin-bottom: 30px;
+                color: #333;
+                position: relative;
+                margin-left: 75px;
+            }
+    
+            .section-title::before {
+                content: '';
+                position: absolute;
+                left: -70px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 7px;
+                background-color:var(--primary-green);
                 
-                    
-                    padding-left: 80px;
-                    
-                    }
-                    
-                    
-                    .content {
-                    
-                    line-height: 1.6;
-                    
-                    font-size: 1.1em;
-                    
-                    color: #555;
-                    
-                    }
-                    
-                    
-                    .highlight {
-                    
-                    color: #667eea;
-                    
-                    font-weight: 600;
-                    
-                    }
-                    
-                    
-                    .highlight-red {
-                    
-                    color: #e74c3c;
-                    
-                    font-weight: 600;
-                    
-                    }
-                    
-           
-                    
-                    </style>
-           
-                    
-                    <div class="about-section">
-                    
-                    <h2 class="section-title">
-                    
-                    About Us
-                    
-                    </h2>
-                    
-                    
-                    <div class="content">
-                    
-                    <p>
-                    
-                    Hi, I'm <span class="highlight">Lucas</span>, a <span class="highlight">website developer</span>.
-                    
-                    I've been researching companies that could benefit from a <span class="highlight">strong online presence</span>,
-                    
-                    and <span class="highlight">Onion Electronics</span> caught my attention.
-                    
-                    </p>
-                    
-                    
-                    <p>
-                    
-                    I noticed that you don't have a website to showcase your services and projects in one place.
-                    
-                    I'd love to offer my <span class="highlight">website development services</span> to help you establish a
-                    
-                    <span class="highlight-red">professional online presence</span>.
-                    
-                    </p>
-                    
-                    
-                    <p>
-                    
-                    If you're interested, I can send over a quote for your review.
-                    
-                    </p>
-                    
-                    </div>
-                    
-                    </div>
-        
-        
-        
-        
-        
-        
-        
-        
-              
-            </div>
-          
-            <div class="right-column-grid">
-              
-        
-                <style>
-                    :root {
-                        --glow-color:#318835; /* Main Cyan/Blue Glow Color */
-                        --glow-color-rgb:0,589,68/* RGB version for rgba() */
-                      
-                    }
-                    .column2{
-                    background-color: var(--background-color);
-                    font-family: 'Inter', sans-serif;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                    padding: 2rem;
-                    box-sizing: border-box;
+            }
+    
+            .intro-text {
+                font-size: 1.22rem;
+                line-height: 1.8;
+                margin-bottom: 25px;
+                color: #555;
+            }
+    
+            .highlight {
+                color:var(--primary-green);
+                font-weight: 500;
+            }
+    
+            .company-name {
+                color: var(--primary-green);
+                font-weight: 600;
+            }
+    
+            .video-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                min-height: 200px;
+            }
+    
+            .video-wrapper {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                aspect-ratio: 16/9;
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d4a22 100%);
+                border-radius: 2px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+    
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                background: rgba(40, 167, 69, 0.9);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
+            }
+    
+            .play-button:hover {
+                background: rgba(40, 167, 69, 1);
+                transform: translate(-50%, -50%) scale(1.1);
+                box-shadow: 0 0 40px rgba(40, 167, 69, 0.7);
+            }
+    
+            .play-button::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 25px solid white;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                margin-left: 5px;
+            }
+    
+            @media (max-width: 768px) {
+                .about-section {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
                 }
                 
+                .content {
                     
-                    .video-player-wrapper {
-                        position: relative;
-                        /* --- Sizing for responsiveness --- */
-                        width: 100%;
-                        max-width:700px;
-                     
-                         /* Larger max-width for desktop screens */
-                      
-                        background: var(--container-bg);
-                        border-radius: 2px;
-                        overflow: hidden;
-                        box-shadow: 
-                            0 20px 50px rgba(0, 0, 0, 0.5),
-                            inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-                    }
+                }
                 
-                    #video-element {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        display: block;
-                        border-radius: 2px;
-                        transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-                    }
+                .section-title {
+                    font-size: 2rem;
+                }
                 
-                    #video-element.is-blurred {
-                        filter: blur(12px) saturate(0.8) brightness(0.6);
-                        transform: scale(1.1);
-                    }
+                .section-title::before {
+                    left: -70px;
+                    width: 60px;
+                    height: 5px;
+                }
                 
-                    .video-overlay {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background: radial-gradient(circle, rgba(var(--glow-color-rgb), 0.15) 0%, rgba(10, 20, 30, 0.7) 100%);
-                        cursor: pointer;
-                        opacity: 1;
-                        transition: opacity 0.6s ease, backdrop-filter 0.6s ease;
-                    }
-                
-                    .video-overlay.is-hidden {
-                        opacity: 0;
-                        pointer-events: none;
-                    }
-                
-                    .play-button-container {
-                        /* Adjusted size slightly for the larger player */
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 50%;
-                        background: rgba(0, 0, 0, 0.25);
-                        backdrop-filter: blur(5px);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-                        animation: pulse-border 2.5s infinite alternate;
-                    }
-                    
-                    .video-overlay:hover .play-button-container {
-                        transform: scale(1.1);
-                        background: rgba(0, 0, 0, 0.4);
-                        box-shadow: 0 0 25px rgba(var(--glow-color-rgb), 0.7), 0 0 40px rgba(var(--glow-color-rgb), 0.4);
-                    }
-                
-                    .play-icon {
-                        width: 45px;
-                        height: 45px;
-                        fill: white;
-                        filter: drop-shadow(0 0 8px var(--glow-color));
-                        transition: filter 0.3s ease;
-                    }
-                
-                    .play-button-container:hover .play-icon {
-                        filter: drop-shadow(0 0 12px var(--glow-color)) drop-shadow(0 0 25px var(--glow-color));
-                    }
-                    
-                    @keyframes pulse-border {
-                        from {
-                            box-shadow: 0 0 15px rgba(var(--glow-color-rgb), 0.5), 0 0 25px rgba(var(--glow-color-rgb), 0.3);
-                        }
-                        to {
-                            box-shadow: 0 0 20px rgba(var(--glow-color-rgb), 0.7), 0 0 35px rgba(var(--glow-color-rgb), 0.4);
-                        }
-                    }
-                    
-                </style>
-                <div class="column2">
-                <div class="video-player-wrapper" id="video-wrapper">
-                    <video id="video-element" class="is-blurred" poster="https://placehold.co/1100x619/0a0a0c/FFFFFF?text=Video+Loading..." preload="metadata">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    
-                    <div class="video-overlay" id="video-overlay">
-                        <div class="play-button-container">
-                            <svg class="play-icon" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </div>
+                .video-container {
+                    min-height: 250px;
+                }
+            }
+        </style>
+ 
+   <section class="about-us">
+        <div class="contain">
+            <div class="about-section">
+                <div class="content">
+                    <h2 class="section-title">About Us</h2>
+                    <div class="intro-text">
+                        Hi, I'm <span class="highlight">Lucas</span>, a <span class="highlight">website developer</span>. I've been researching companies that could benefit from a <span class="highlight">strong online presence</span>, and <span class="company-name">Onion Electronics</span> caught my attention.
+                    </div>
+                    <div class="intro-text">
+                        I noticed that you don't have a website to showcase your services and projects in one place. I'd love
                     </div>
                 </div>
                 
-    
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="play-button" onclick="playVideo()"></div>
+                    </div>
                 </div>
-                
             </div>
-          </div>
+        </div>
+    
+        <script>
+            function playVideo() {
+                alert('Video would play here! You can integrate with your preferred video player.');
+            }
+        </script>
+        </section>
+
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
-<script src="static/scrips.js"></script>
+<script src="static/scrips.js" ></script>
 
 </html>
 
