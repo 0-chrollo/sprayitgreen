@@ -4,132 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Hero Section</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta http-equiv="Cache-Control" content="max-age=31536000">
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- Basic Reset & Typography --- */
-        :root {
-            --primary-green: #1E4620;
-            --accent-yellow: #FBBF24;
-            --light-text: #F0FDF4;
-            --dark-text: #1E4620;
-        }
-
-
-        body {
-            font-family:'Gill Sans';
-          
-            line-height: 1.6;
-            text-align: left;
-        }
-
-        /* --- Hero Section Styling --- */
-        .hero {
-            color: var(--light-text);
-            background-color: var(--primary-green);
-      
-            justify-content:left;
-            /* Make hero section take full viewport height */
-            padding: 2rem; /* Add padding for spacing on smaller screens */
-        }
-
-        .hero-content {
-            
-            height:auto;
-            max-width: 650px; /* Limit the width of the content for readability */
-            text-align: left; /* Default to left-align */
-            width: 100%;
-        }
-
-        /* --- Typography Styling --- */
-        .hero-title {
-            text-align: left;
-            font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        .key-color {
-            color:  #FBBF24; /* Highlight color for specific words */
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.125rem); /* Responsive font size */
-            max-width: 500px;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            
-        }
-
-        /* --- Button Styling --- */
-        .hero-buttons {
-            flex-direction:row;
-            display: flex;
-            /* Allow buttons to wrap on small screens */
-            align-items: left; /* Align buttons vertically */
-            gap: 1rem; /* Space between buttons */
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.70rem 1.45rem;
-            border-radius: 0.2rem; /* Rounded corners */
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 80%;
-            border: 1.66px solid transparent;
-            /* Smooth transition for hover effects */
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-align: left;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-yellow);
-            color: var(--dark-text);
-        }
-
-        .btn-primary:hover {
-            background-color: #FACC15; /* Slightly lighter yellow on hover */
-            transform: translateY(-3px); /* Subtle lift effect */
-            box-shadow: 0 10px 15px rgba(254, 243, 243, 0.317);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--light-text);
-            border-color: var(--light-text);
-            /* --- Make this button smaller than the primary one --- */
-            padding: 0.625rem 1.5rem;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--light-text);
-            color: var(--primary-green);
-            transform: translateY(-3px); /* Subtle lift effect */
-        }
-
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 768px) {
-            .hero-content {
-                
-                /* Keep content left-aligned on mobile */
-                text-align: left;
-            }
-
-            .hero-buttons {
-                /* Stack buttons vertically */
-                flex-direction:row;
-                /* Horizontally align buttons to the left */
-                align-items: flex-start;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -177,6 +55,7 @@
 
 
 
+
     <section class="hero">
         <div class="hero-content">
             <!-- Main Heading -->
@@ -200,145 +79,8 @@
         </div>
     </section>
 
-  
 
 
-
-
-
-
-        <style>
-            
-    
-            .about-us {
-                 background-color: #f8f9fa;
-                color: #333;
-            }
-    
-            .contain {
-                max-width: 1200px;
-                margin: 20px auto;
-                padding: 15px 15px;
-                gap:30px;
-            }
-    
-            .about-section {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 100px;
-                align-items: center;
-            }
- 
-            .section-title {
-                font-size: 3.5rem;
-                font-weight: 350;
-                margin-bottom: 30px;
-                color: #333;
-                position: relative;
-                margin-left: 75px;
-            }
-    
-            .section-title::before {
-                content: '';
-                position: absolute;
-                left: -70px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 50px;
-                height: 7px;
-                background-color:var(--primary-green);
-                
-            }
-    
-            .intro-text {
-                font-size: 1.3rem;
-                line-height: 1.6;
-                margin-bottom: 25px;
-                color:#223b24df;
-            }
-    
-            .highlight {
-               
-                font-weight: 900;
-            }
-    
-            .company-name {
-               color:#276029;
-                font-weight: 700;
-            }
-    
-            .video-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                min-height: 200px;
-            }
-    
-            .video-wrapper {
-                position: relative;
-                width: 100%;
-                max-width: 500px;
-                aspect-ratio: 16/9;
-                background: linear-gradient(135deg, #1a1a1a 0%, #2d4a22 100%);
-                border-radius: 2px;
-                overflow: hidden;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            }
-    
-            .play-button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80px;
-                height: 80px;
-                background: rgba(40, 167, 69, 0.9);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                box-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
-            }
-    
-            .play-button:hover {
-                background: rgba(40, 167, 69, 1);
-                transform: translate(-50%, -50%) scale(1.1);
-                box-shadow: 0 0 40px rgba(40, 167, 69, 0.7);
-            }
-    
-            .play-button::before {
-                content: '';
-                width: 0;
-                height: 0;
-                border-left: 25px solid white;
-                border-top: 15px solid transparent;
-                border-bottom: 15px solid transparent;
-                margin-left: 5px;
-            }
-    
-            @media (max-width: 768px) {
-                .about-section {
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                }
-                .section-title {
-                    font-size: 2rem;
-                }
-                
-                .section-title::before {
-                    left: -70px;
-                    width: 60px;
-                    height: 5px;
-                }
-                
-                .video-container {
-                    min-height: 250px;
-                }
-            }
-        </style>
  
    <section class="about-us">
         <div class="contain">
@@ -1271,7 +1013,7 @@
     /* Footer Styles */
     .footer {
         background-color: var(--primary-green);
-        color: #ffffff;
+        color:white;
         padding: 40px 0 20px;
         margin-top: auto;
     }
@@ -1290,7 +1032,7 @@
     }
 
     .footer-section h3 {
-        color: #ffffff;
+        color: white;
         margin-bottom: 15px;
         font-size: 1.2em;
         font-weight: 600;
@@ -1301,7 +1043,7 @@
 
     .footer-section p,
     .footer-section li {
-        color: #bdc3c7;
+        color:white;
         font-size: 0.95em;
         line-height: 1.7;
     }
@@ -1374,7 +1116,7 @@
     }
 
     .footer-bottom p {
-        color: #95a5a6;
+        color:white;
         font-size: 0.9em;
     }
 
@@ -1385,7 +1127,7 @@
     }
 
     .footer-bottom-links a {
-        color: #95a5a6;
+        color:white;
         text-decoration: none;
         font-size: 0.9em;
         transition: color 0.3s ease;
