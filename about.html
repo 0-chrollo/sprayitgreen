@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glow-color: hsl(180, 100%, 50%); /* Main Cyan/Blue Glow Color */
+            --glow-color-rgb: 0, 255, 255; /* RGB version for rgba() */
+          
+        }
+
+        .column2{
+            background-color: var(--background-color);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .video-player-wrapper {
+            position: relative;
+            /* --- Sizing for responsiveness --- */
+            width: 100%;
+            max-width:650px;
+             /* Larger max-width for desktop screens */
+          
+            background: var(--container-bg);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        #video-element {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px;
+            transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        #video-element.is-blurred {
+            filter: blur(12px) saturate(0.8) brightness(0.6);
+            transform: scale(1.1);
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, rgba(var(--glow-color-rgb), 0.15) 0%, rgba(10, 20, 30, 0.7) 100%);
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.6s ease, backdrop-filter 0.6s ease;
+        }
+
+        .video-overlay.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .play-button-container {
+            /* Adjusted size slightly for the larger player */
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse-border 2.5s infinite alternate;
+        }
+        
+        .video-overlay:hover .play-button-container {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 25px rgba(var(--glow-color-rgb), 0.7), 0 0 40px rgba(var(--glow-color-rgb), 0.4);
+        }
+
+        .play-icon {
+            width: 45px;
+            height: 45px;
+            fill: white;
+            filter: drop-shadow(0 0 8px var(--glow-color));
+            transition: filter 0.3s ease;
+        }
+
+        .play-button-container:hover .play-icon {
+            filter: drop-shadow(0 0 12px var(--glow-color)) drop-shadow(0 0 25px var(--glow-color));
+        }
+        
+        @keyframes pulse-border {
+            from {
+                box-shadow: 0 0 15px rgba(var(--glow-color-rgb), 0.5), 0 0 25px rgba(var(--glow-color-rgb), 0.3);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(var(--glow-color-rgb), 0.7), 0 0 35px rgba(var(--glow-color-rgb), 0.4);
+            }
+        }
+        
+    </style>
+<section class="column2">
+    <div class="video-player-wrapper" id="video-wrapper">
+        <video id="video-element" class="is-blurred" poster="https://placehold.co/1100x619/0a0a0c/FFFFFF?text=Video+Loading..." preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="video-overlay" id="video-overlay">
+            <div class="play-button-container">
+                <svg class="play-icon" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const videoWrapper = document.getElementById('video-wrapper');
+        const video = document.getElementById('video-element');
+        const overlay = document.getElementById('video-overlay');
+
+        function playVideo() {
+            overlay.classList.add('is-hidden');
+            video.classList.remove('is-blurred');
+            video.controls = true;
+            video.play().catch(error => {
+                console.error("Video play failed:", error);
+                overlay.classList.remove('is-hidden');
+                video.controls = false;
+            });
+        }
+
+        overlay.addEventListener('click', playVideo);
+
+        video.addEventListener('pause', () => {
+            if (!video.ended && video.controls) {
+                overlay.classList.remove('is-hidden');
+                video.controls = false;
+            }
+        });
+
+        video.addEventListener('ended', () => {
+            overlay.classList.remove('is-hidden');
+            video.classList.add('is-blurred');
+            video.controls = false;
+            video.currentTime = 0;
+        });
+        
+        video.controls = false;
+    </script>
+</body>
+</html>
