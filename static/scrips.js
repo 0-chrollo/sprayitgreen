@@ -58,3 +58,72 @@ window.addEventListener('resize', () => {
         document.body.style.overflow = 'auto';
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const videoWrapper = document.getElementById('video-wrapper');
+const video = document.getElementById('video-element');
+
+
+function playVideo() {
+    overlay.classList.add('is-hidden');
+    video.classList.remove('is-blurred');
+    video.controls = true;
+    video.play().catch(error => {
+        console.error("Video play failed:", error);
+        overlay.classList.remove('is-hidden');
+        video.controls = false;
+    });
+}
+
+overlay.addEventListener('click', playVideo);
+
+video.addEventListener('pause', () => {
+    if (!video.ended && video.controls) {
+        overlay.classList.remove('is-hidden');
+        video.controls = false;
+    }
+});
+
+video.addEventListener('ended', () => {
+    overlay.classList.remove('is-hidden');
+    video.classList.add('is-blurred');
+    video.controls = false;
+    video.currentTime = 0;
+});
+
+video.controls = false;
