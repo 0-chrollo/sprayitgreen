@@ -248,7 +248,7 @@ align-items:self-start;
         .left-column-grid,
         .right-column-grid {
           /* No need for flex: 1 here, grid-template-columns handles the sizing */
-          padding: 25px;
+          padding: 20px;
         
           box-sizing: border-box;
         }
@@ -278,13 +278,16 @@ align-items:self-start;
         @media (max-width: 768px) {
           .main-content-grid-wrapper {
             grid-template-columns: 1fr; /* Changes to a single column for stacking */
-            gap: 20px; /* Adjust gap when stacked */
+            gap: 10px; /* Adjust gap when stacked */
           }
         
           /* Optional: Adjust padding on smaller screens if needed */
-          .left-column-grid,
-          .right-column-grid {
+          .left-column-grid{
+
             padding: 20px;
+          }
+          .right-column-grid {
+            padding: 2px;
           }
         }
         
