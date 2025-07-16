@@ -21,8 +21,7 @@
 
 
         body {
-            font-family: 'Inter', sans-serif;
-           
+            font-family:'Gill Sans';
           
             line-height: 1.6;
             text-align: left;
@@ -32,10 +31,7 @@
         .hero {
             color: var(--light-text);
             background-color: var(--primary-green);
-          
-        
-            display:grid;
-            align-items:center;
+      
             justify-content:left;
             /* Make hero section take full viewport height */
             padding: 2rem; /* Add padding for spacing on smaller screens */
@@ -43,7 +39,7 @@
 
         .hero-content {
             
-            height:45rem;
+            height:auto;
             max-width: 650px; /* Limit the width of the content for readability */
             text-align: left; /* Default to left-align */
             width: 100%;
@@ -53,13 +49,13 @@
         .hero-title {
             text-align: left;
             font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
-            font-weight: 700;
-            line-height: 1.2;
+            font-weight: 400;
+            line-height: 1.1;
             margin-bottom: 1rem;
         }
 
-        .highlight {
-            color: var(--accent-yellow); /* Highlight color for specific words */
+        .key-color {
+            color:  #FBBF24; /* Highlight color for specific words */
         }
 
         .hero-subtitle {
@@ -67,6 +63,7 @@
             max-width: 500px;
             margin-bottom: 2.5rem;
             opacity: 0.9;
+            
         }
 
         /* --- Button Styling --- */
@@ -184,41 +181,14 @@
         <div class="hero-content">
             <!-- Main Heading -->
             <h1 class="hero-title">
-                Simple Sustainability with <span class="highlight">Community Solar.</span>
+                Simple Sustainability with <span class="key-color">Community Solar.</span>
             </h1>
             <!-- Subheading -->
             <p class="hero-subtitle">
-                We consult large energy users to give them access to Community Solar programs turnkey.
-            </p>
-
-
-
-
-<style>
-
-    .keys{
-
-display:grid;
-margin:1.5rem;
-align-items:self-start;
-    }
-
-    .l1{
-        margin:5px;
-    }
-</style>
-
-            <div class="keys">
-
-<span class="l1"><i class="fa-solid fa-user-shield"></i> Spray it green for your grasses</span>
-
-<span class="l1"><i class="fa-solid fa-user-shield"></i> Spray it green for your grasses</span>
-        
-             </div>
-
-
+               <i class="fas fa home"></i> We consult large energy users to give them access to Community Solar programs turnkey.
+        </br>
              <p class="hero-subtitle">
-                We consult large energy users to give them access to Community Solar programs turnkey.
+                <i class="fas fa home"></i> We consult large energy users to give them access to Community Solar programs turnkey.
             </p>
 
 
@@ -241,8 +211,7 @@ align-items:self-start;
             
     
             .about-us {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background-color: #f8f9fa;
+                 background-color: #f8f9fa;
                 color: #333;
             }
     
@@ -259,11 +228,7 @@ align-items:self-start;
                 gap: 100px;
                 align-items: center;
             }
-    
-            .content {
-                padding-right: 10px;
-            }
-    
+ 
             .section-title {
                 font-size: 3.5rem;
                 font-weight: 350;
@@ -286,20 +251,20 @@ align-items:self-start;
             }
     
             .intro-text {
-                font-size: 1.22rem;
-                line-height: 1.8;
+                font-size: 1.3rem;
+                line-height: 1.6;
                 margin-bottom: 25px;
-                color: #555;
+                color:#223b24df;
             }
     
             .highlight {
-                color:var(--primary-green);
-                font-weight: 500;
+               
+                font-weight: 900;
             }
     
             .company-name {
-                color: var(--primary-green);
-                font-weight: 600;
+               color:#276029;
+                font-weight: 700;
             }
     
             .video-container {
@@ -359,11 +324,6 @@ align-items:self-start;
                     grid-template-columns: 1fr;
                     gap: 30px;
                 }
-                
-                .content {
-                    
-                }
-                
                 .section-title {
                     font-size: 2rem;
                 }
@@ -1082,27 +1042,27 @@ align-items:self-start;
 
 
         .franchise-item:nth-child(1) {
-            --accent-color: #2563eb;
+            --accent-color: #FBBF24;
         }
 
         .franchise-item:nth-child(2) {
-            --accent-color: #7c3aed;
+            --accent-color:#2c7c2f;
         }
 
         .franchise-item:nth-child(3) {
-            --accent-color: #0891b2;
+            --accent-color: #FBBF24;
         }
 
         .franchise-item:nth-child(4) {
-            --accent-color: #059669;
+            --accent-color:#2c7c2f;
         }
 
         .franchise-item:nth-child(5) {
-            --accent-color: #dc2626;
+            --accent-color: #FBBF24;
         }
 
         .franchise-item:nth-child(6) {
-            --accent-color: #ea580c;
+            --accent-color:#2c7c2f;
         }
 
         .franchise-item::before {
@@ -1310,7 +1270,7 @@ align-items:self-start;
 
     /* Footer Styles */
     .footer {
-        background-color:#02655aee;
+        background-color: var(--primary-green);
         color: #ffffff;
         padding: 40px 0 20px;
         margin-top: auto;
@@ -1334,7 +1294,7 @@ align-items:self-start;
         margin-bottom: 15px;
         font-size: 1.2em;
         font-weight: 600;
-        border-bottom: 2px solid #3498db;
+        border-bottom: 2px solid var(--accent-yellow);
         padding-bottom: 5px;
         display: inline-block;
     }
@@ -1489,7 +1449,7 @@ align-items:self-start;
         <div class="footer-content">
             <!-- Company Info Section -->
             <div class="footer-section">
-                <h3>About Mauer Solar</h3>
+                <h3>About Sprayit Green</h3>
 <p>We are a professional solar installation company dedicated to helping families and businesses achieve energy independence. Our team takes pride in delivering exceptional service from consultation to completion, ensuring every installation is neat, compliant, and built to last. </p>
 <div class="social-links">
                     <a href="https://www.facebook.com/mauerpowersolar"><i class="fab fa-facebook-f"></i></a>
