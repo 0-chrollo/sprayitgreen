@@ -72,6 +72,225 @@
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <style>
+
+        .contact-container {
+            font-family: 'Inter', sans-serif;
+            background-color: #225624a7;/* A color sampled from the image */
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-wrapper {
+            width: 100%;
+            max-width: 1100px; /* Limits the width on very large screens */
+        }
+
+        /* --- Typography --- */
+        .contact-wrapper h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info .info-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-info .info-item strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        /* --- Layout --- */
+        /* * We use Flexbox for a responsive two-column layout.
+         * 'flex-wrap: wrap' allows columns to stack on smaller screens.
+         * 'gap' provides spacing between the columns.
+        */
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1 1 400px; /* Each column will try to be at least 400px */
+        }
+
+        /* --- Form Styling --- */
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* This handles the side-by-side Name and Email fields */
+        .form-row {
+            display: flex;
+            flex-wrap: wrap; /* Allows them to stack on small screens */
+            gap: 1rem;
+        }
+
+        .form-row .input-group {
+            flex: 1 1 200px; /* Each field will try to be at least 200px */
+        }
+        
+        .input-group {
+            width: 100%;
+        }
+
+        /* Styling for all input fields and the textarea */
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            background-color: #ffffff;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #d4a355; /* Highlight color on focus */
+            box-shadow: 0 0 0 3px rgba(212, 163, 85, 0.3);
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical; /* Allow user to resize vertically */
+        }
+
+        /* --- Button Styling --- */
+        .submit-btn {
+            padding: 1rem;
+            background-color: #1E4620; /* A slightly brighter color for the button */
+            color: #ffffff;
+            border: none;
+            border-radius: 2px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #c59445; /* Darken on hover */
+        }
+        
+        .submit-btn:active {
+            transform: scale(0.98); /* Click effect */
+        }
+    </style>
+
+
+    <div class="contact-container">
+        <div class="contact-wrapper">
+            
+            <h1>Request for Sprayit Green Frachise Today</h1>
+
+            <!-- This grid holds the two main columns: Info and Form -->
+            <div class="content-grid">
+
+                <!-- Left Column: Contact Information -->
+                <div class="contact-info">
+                    <h2>Reach Us</h2>
+                    <div class="info-item">
+                        <strong>Location:</strong>
+                        <span>5 Inkoos St, Roodepoort</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong>
+                        <span>info@vascorenovations.co.za</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone:</strong>
+                        <span>+27 71 054 5649</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <!-- A row for side-by-side inputs -->
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required aria-label="Your Name">
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required aria-label="Your Email">
+                            </div>
+                        </div>
+                        
+                        <!-- Full-width inputs -->
+                        <div class="input-group">
+                            <input type="tel" id="contact_no" name="contact_no" class="form-input" placeholder="Contact No" required aria-label="Contact Number">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="purpose" name="purpose" class="form-input" placeholder="Purpose Of Contact" required aria-label="Purpose Of Contact">
+                        </div>
+                        
+                        <!-- Textarea for the message -->
+                        <div class="input-group">
+                            <textarea id="message" name="message" class="form-input" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 
 <script src="static/scrips.js" defer></script>
