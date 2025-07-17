@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Hero Section</title>
+    <title>Sprayit Green | Contact Us</title>
     <meta http-equiv="Cache-Control" content="max-age=31536000">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="all">
@@ -52,23 +52,22 @@
 
 
 <section class="hero">
-  <div class="hero-content">
-      <!-- Main Heading -->
-      <h1 class="hero-title">
-          Simple Sustainability with <span class="key-color">Community Solar.</span>
-      </h1>
-      <!-- Subheading -->
-      <p class="hero-subtitle">
-         <i class="fas fa home"></i> We consult large energy users to give them access to Community Solar programs turnkey.
-  
-
-
-      <!-- Call-to-Action Buttons -->
-      <div class="hero-buttons">
-          <p><a href="index.html" class="btn btn-primary"><i class="fas fa-home"> </i> Home</a></p>
-          <p><a href="learn.html" class="btn btn-secondary">Learn More</a></p>
-      </div>
-  </div>
+    <div class="hero-content">
+        <!-- Main Heading -->
+        <h1 class="hero-title">
+            Ready to Join <span class="key-color">Sprayit Green?</span>
+        </h1>
+        <!-- Subheading -->
+        <p class="hero-subtitle">
+           <i class="fas fa-phone"></i> Get in touch to learn more about our franchise opportunity and start your journey to year-round lawn care success.
+        </p>
+    
+        <!-- Call-to-Action Buttons -->
+        <div class="hero-buttons">
+            <p><a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Home</a></p>
+            <p><a href="learnmore.html" class="btn btn-secondary">Learn More</a></p>
+        </div>
+    </div>
 </section>
 
 
@@ -286,232 +285,233 @@
     </div>
 
 
-    <style>
+ 
+<style>
 
 
-        /* Footer Styles */
-        .footer {
-            background-color: var(--primary-green);
-            color:white;
-            padding: 40px 0 20px;
-            margin-top: auto;
-        }
-    
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-    
+    /* Footer Styles */
+    .footer {
+        background-color: var(--primary-green);
+        color:white;
+        padding: 40px 0 20px;
+        margin-top: auto;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        font-weight: 600;
+        border-bottom: 2px solid var(--accent-yellow);
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        color:white;
+        font-size: 0.95em;
+        line-height: 1.7;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: #3498db;
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-info i {
+        width: 20px;
+        margin-right: 10px;
+        color: #3498db;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color:white;
+        color: rgb(25, 98, 25);
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        background-color: #3498db;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #34495e;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-bottom p {
+        color:white;
+        font-size: 0.9em;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom-links a {
+        color:white;
+        text-decoration: none;
+        font-size: 0.9em;
+        transition: color 0.3s ease;
+    }
+
+    .footer-bottom-links a:hover {
+        color: #3498db;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr;
+            gap: 25px;
         }
-    
+        
+        .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .footer-bottom-links {
+            justify-content: center;
+        }
+        
+        .social-links {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer {
+            padding: 30px 0 15px;
+        }
+        
+        .footer-container {
+            padding: 0 15px;
+        }
+        
         .footer-section h3 {
-            color: white;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            font-weight: 600;
-            border-bottom: 2px solid var(--accent-yellow);
-            padding-bottom: 5px;
-            display: inline-block;
+            font-size: 1.1em;
         }
-    
+        
         .footer-section p,
         .footer-section li {
-            color:white;
-            font-size: 0.95em;
-            line-height: 1.7;
+            font-size: 0.9em;
         }
-    
-        .footer-section ul {
-            list-style: none;
-        }
-    
-        .footer-section ul li {
-            margin-bottom: 8px;
-        }
-    
-        .footer-section ul li a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-    
-        .footer-section ul li a:hover {
-            color: #3498db;
-        }
-    
-        .contact-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-    
-        .contact-info i {
-            width: 20px;
-            margin-right: 10px;
-            color: #3498db;
-        }
-    
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-    
+        
         .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: #34495e;
-            color: #ecf0f1;
-            text-align: center;
-            line-height: 40px;
-            text-decoration: none;
-            border-radius: 3px;
-            transition: background-color 0.3s ease;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
         }
-    
-        .social-links a:hover {
-            background-color: #3498db;
-        }
-    
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 20px;
-            text-align: center;
-        }
-    
-        .footer-bottom-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-    
-        .footer-bottom p {
-            color:white;
-            font-size: 0.9em;
-        }
-    
-        .footer-bottom-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-    
-        .footer-bottom-links a {
-            color:white;
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: color 0.3s ease;
-        }
-    
-        .footer-bottom-links a:hover {
-            color: #3498db;
-        }
-    
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            
-            .footer-bottom-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .footer-bottom-links {
-                justify-content: center;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .footer {
-                padding: 30px 0 15px;
-            }
-            
-            .footer-container {
-                padding: 0 15px;
-            }
-            
-            .footer-section h3 {
-                font-size: 1.1em;
-            }
-            
-            .footer-section p,
-            .footer-section li {
-                font-size: 0.9em;
-            }
-            
-            .social-links a {
-                width: 35px;
-                height: 35px;
-                line-height: 35px;
-            }
-        }
-    </style>
-    
-    
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Company Info Section -->
-                <div class="footer-section">
-                    <h3>About Sprayit Green</h3>
-                    <p>We are a franchise business offering lawn maintenance and estate management services. Developed during COVID-19, our 100% organic, water-based product transforms dormant winter grass into lush green lawns, safe for humans and animals, while providing year-round income opportunities for franchisees.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+    }
+</style>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- Company Info Section -->
+            <div class="footer-section">
+                <h3>About Sprayit Green</h3>
+                <p>We are a franchise business offering lawn maintenance and estate management services. Developed during COVID-19, our 100% organic, water-based product transforms dormant winter grass into lush green lawns, safe for humans and animals, while providing year-round income opportunities for franchisees.</p>
+                <div class="social-links">
+                    <a href="https://tiktok.com/@sprayitgreen"> <i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/+27832836991" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-    
-                <!-- What We Offer Section -->
-                <div class="footer-section">
-                    <h3>What We Offer</h3>
-                    <ul>
-                        <li>100% Organic Lawn Coloring</li>
-                        <li>Necessary Training</li>
-                        <li>Quality Equipment</li>
-                        <li>Year-Round Income</li>
-                        <li>Business Support</li>
-                        <li>Franchise Partnership</li>
-                    </ul>
-                </div>
-    
-                <!-- Quick Links Section -->
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="learnmore.html">Learn More</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-    
             </div>
-    
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Sprayit Green. All rights reserved. Powered by Lucas Mkohlakali</p>
-                </div>
+  
+            <!-- What We Offer Section -->
+            <div class="footer-section">
+                <h3>What We Offer</h3>
+                <ul>
+                    <li>100% Organic Lawn Coloring</li>
+                    <li>Necessary Training</li>
+                    <li>Quality Equipment</li>
+                    <li>Year-Round Income</li>
+                    <li>Business Support</li>
+                    <li>Franchise Partnership</li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn More</a></li>
+            
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Sprayit Green. All rights reserved. Powered by Lucas Mkohlakali</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     
 </body>
 
