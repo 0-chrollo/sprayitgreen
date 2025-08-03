@@ -61,14 +61,10 @@
       <!--Navbar-->
    <!--Navbar-->
 
-
-
 </br>
 </br>
 </br>
-
-
-
+555
 
 <section class="hero">
     <div class="hero-content">
@@ -123,20 +119,90 @@
                     </p>
                 </div>
             </div>
+
+            <style>
+                .video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   min-height: 200px;
+}
+
+.video-wrapper {
+   position: relative;
+   width: 100%;
+   max-width: 500px;
+   aspect-ratio: 16/9;
+   background: linear-gradient(135deg, #1a1a1a 0%, #2d4a22 100%);
+   border-radius: 2px;
+   overflow: hidden;
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.play-button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80px;
+   height: 80px;
+   background: rgba(40, 167, 69, 0.9);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
+}
+
+.play-button:hover {
+   background: rgba(40, 167, 69, 1);
+   transform: translate(-50%, -50%) scale(1.1);
+   box-shadow: 0 0 40px rgba(40, 167, 69, 0.7);
+}
+
+.play-button::before {
+   content: '';
+   width: 0;
+   height: 0;
+   border-left: 25px solid white;
+   border-top: 15px solid transparent;
+   border-bottom: 15px solid transparent;
+   margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+   .about-section {
+       grid-template-columns: 1fr;
+       gap: 30px;
+   }
+   .section-title {
+       font-size: 2rem;
+   }
+   
+   .section-title::before {
+       left: -70px;
+       width: 60px;
+       height: 5px;
+   }
+   
+   .video-container {
+       min-height: 250px;
+   }
+}
+            </style>
             
             <div class="video-container">
                 <div class="video-wrapper">
-                    <div class="play-button" onclick="playVideo()"></div>
+                    <div class="play-button" onclick="this.style.display='none'; document.getElementById('mainVideo').style.display='block'; document.getElementById('mainVideo').play();" id="playBtn"></div>
+                    <video id="mainVideo" controls style="width: 100%; height: 100%; display: none;">
+                        <source src="https://files.catbox.moe/qfo897.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-        </div>
-    </div>
-    
-        <script>
-            function playVideo() {
-                alert('Video would play here! You can integrate with your preferred video player.');
-            }
-        </script>
+       
         </section>
 
 
